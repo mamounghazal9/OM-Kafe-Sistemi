@@ -1,6 +1,6 @@
 ﻿namespace OM_Kafe_Sistemi
 {
-    partial class LoginForm
+    partial class kgyjy
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kgyjy));
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();

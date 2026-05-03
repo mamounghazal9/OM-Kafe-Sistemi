@@ -1,8 +1,8 @@
 namespace OM_Kafe_Sistemi
 {
-    public partial class LoginForm : Form
+    public partial class kgyjy : Form
     {
-        public LoginForm()
+        public kgyjy()
         {
             InitializeComponent();
         }
