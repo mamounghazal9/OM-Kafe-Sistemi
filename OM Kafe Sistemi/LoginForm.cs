@@ -15,40 +15,6 @@ namespace OM_Kafe_Sistemi
         {
             InitializeComponent();
         }
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            SetPanelPosition();
-        }
-
-        private void LoginForm_Resize(object sender, EventArgs e)
-        {
-            SetPanelPosition();
-        }
-        private void ArrangeButtonsAtRedCirclePosition()
-        {
-            // تحديد المكان الذي تريد وضع الأزرار فيه (محل الدائرة الحمراء)
-            int startX = 150;  // الإحداثي X للمكان المطلوب
-            int startY = 80;   // الإحداثي Y للمكان المطلوب
-
-            // ترتيب الأزرار عمودياً في ذلك المكان
-            usernametxt.Location = new Point(startX, startY);
-            passwordtxt.Location = new Point(startX, startY + 40);
-            loginbtn.Location = new Point(startX, startY + 100);
-
-            // أو إذا أزرار أخرى مثل:
-            // buttonOM.Location = new Point(startX, startY);
-            // buttonCoffee.Location = new Point(startX + 60, startY);
-        }
-        private void SetPanelPosition()
-        {
-            panel1.BackColor = Color.FromArgb(150, 0, 0, 0);
-            int marginRight = 25;
-            int yPercent = 52;
-
-            panel1.Left = this.ClientSize.Width - panel1.Width - marginRight;
-            panel1.Top = (this.ClientSize.Height * yPercent) / 100;
-        }
-
         private void loginbtn_Click(object sender, EventArgs e)
         {
             string username = usernametxt.Text;
