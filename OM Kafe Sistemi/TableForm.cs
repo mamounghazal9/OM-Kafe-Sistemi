@@ -17,19 +17,7 @@ namespace OM_Kafe_Sistemi
 
         private void TableForm_Load(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 10; i++)
-            {
-                Button btn = new Button();
-                btn.Text = "M " + i;
-                btn.Width = 100;
-                btn.Height = 100;
-                btn.BackColor = Color.LightGreen;
-                btn.Font = new Font("Arial", 12, FontStyle.Bold);
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderSize = 0;
-                btn.ForeColor = Color.Black;
-                flowLayoutPanel1.Controls.Add(btn);
-            }
+            
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
