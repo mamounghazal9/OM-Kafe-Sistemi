@@ -1,3 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
 namespace OM_Kafe_Sistemi
 {
     public partial class LoginForm : Form
@@ -5,34 +13,6 @@ namespace OM_Kafe_Sistemi
         public LoginForm()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            if (username == "OM" && password == "2005")
-            {
-                TableForm tableForm = new TableForm();
-                tableForm.Show();
-                this.Hide();
-            }
-
-            else
-            {
-                MessageBox.Show("Username or password is wrong");
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
