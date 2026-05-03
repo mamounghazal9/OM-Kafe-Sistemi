@@ -46,7 +46,7 @@
             label1.Name = "label1";
             label1.Size = new Size(204, 31);
             label1.TabIndex = 0;
-            label1.Text = "         ADI SOYADI";
+            label1.Text = "         USERNAME";
             // 
             // label2
             // 
@@ -58,7 +58,7 @@
             label2.Name = "label2";
             label2.Size = new Size(204, 31);
             label2.TabIndex = 1;
-            label2.Text = "              ŞİFRE";
+            label2.Text = "         PASSWORD          ";
             // 
             // button1
             // 
@@ -69,7 +69,7 @@
             button1.Name = "button1";
             button1.Size = new Size(129, 33);
             button1.TabIndex = 2;
-            button1.Text = "GİRİŞ";
+            button1.Text = "LOGİN";
             button1.UseVisualStyleBackColor = false;
             // 
             // textBox1

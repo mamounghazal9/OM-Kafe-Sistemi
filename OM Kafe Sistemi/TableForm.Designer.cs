@@ -28,36 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableForm));
+            button1 = new Button();
             SuspendLayout();
             // 
-            // pictureBox1
+            // button1
             // 
-            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2026_05_01_at_23_361;
-            pictureBox1.Location = new Point(59, 49);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1000, 417);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.Font = new Font("Elephant", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(29, 40);
+            button1.Name = "button1";
+            button1.Size = new Size(173, 165);
+            button1.TabIndex = 0;
+            button1.Text = "TABLE 1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // TableForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DimGray;
+            BackColor = Color.FromArgb(26, 16, 8);
             ClientSize = new Size(1261, 682);
-            Controls.Add(pictureBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Controls.Add(button1);
+            Margin = new Padding(2);
             Name = "TableForm";
             Text = "TableForm";
             Load += TableForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private Button button1;
     }
 }

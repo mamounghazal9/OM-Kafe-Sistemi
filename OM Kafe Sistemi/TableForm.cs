@@ -31,5 +31,15 @@ namespace OM_Kafe_Sistemi
                 flowLayoutPanel1.Controls.Add(btn);
             }
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
