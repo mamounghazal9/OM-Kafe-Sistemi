@@ -129,5 +129,15 @@ namespace OM_Kafe_Sistemi.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_05_02_at_12_111 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-05-02 at 12.111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
