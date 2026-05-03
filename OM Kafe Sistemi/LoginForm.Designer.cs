@@ -114,7 +114,7 @@
             Controls.Add(usernamelbl);
             Margin = new Padding(5);
             Name = "LoginForm";
-            Text = "LoginForm";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }
