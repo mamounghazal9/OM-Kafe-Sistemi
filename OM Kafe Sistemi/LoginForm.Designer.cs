@@ -37,7 +37,7 @@
             // 
             // loginbtn
             // 
-            loginbtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            loginbtn.Anchor = AnchorStyles.Right;
             loginbtn.Location = new Point(1216, 675);
             loginbtn.Margin = new Padding(5);
             loginbtn.Name = "loginbtn";
@@ -49,19 +49,19 @@
             // 
             // passwordtxt
             // 
-            passwordtxt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            passwordtxt.Anchor = AnchorStyles.Right;
             passwordtxt.BackColor = Color.FromArgb(26, 16, 8);
             passwordtxt.BorderStyle = BorderStyle.FixedSingle;
             passwordtxt.ForeColor = Color.Moccasin;
             passwordtxt.Location = new Point(1003, 562);
             passwordtxt.Margin = new Padding(5);
             passwordtxt.Name = "passwordtxt";
+            passwordtxt.PasswordChar = '*';
             passwordtxt.Size = new Size(452, 39);
             passwordtxt.TabIndex = 13;
             // 
             // usernametxt
             // 
-            usernametxt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             usernametxt.BackColor = Color.FromArgb(26, 16, 8);
             usernametxt.BorderStyle = BorderStyle.FixedSingle;
             usernametxt.ForeColor = Color.Moccasin;
@@ -73,7 +73,7 @@
             // 
             // passwordlab
             // 
-            passwordlab.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            passwordlab.Anchor = AnchorStyles.Right;
             passwordlab.AutoSize = true;
             passwordlab.BackColor = Color.FromArgb(26, 16, 8);
             passwordlab.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -88,7 +88,7 @@
             // 
             // usernamelbl
             // 
-            usernamelbl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            usernamelbl.Anchor = AnchorStyles.Right;
             usernamelbl.AutoSize = true;
             usernamelbl.BackColor = Color.FromArgb(26, 16, 8);
             usernamelbl.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
