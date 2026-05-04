@@ -37,7 +37,7 @@
             // 
             // loginbtn
             // 
-            loginbtn.Anchor = AnchorStyles.Right;
+            loginbtn.Anchor = AnchorStyles.None;
             loginbtn.Location = new Point(1216, 675);
             loginbtn.Margin = new Padding(5);
             loginbtn.Name = "loginbtn";
@@ -49,7 +49,7 @@
             // 
             // passwordtxt
             // 
-            passwordtxt.Anchor = AnchorStyles.Right;
+            passwordtxt.Anchor = AnchorStyles.None;
             passwordtxt.BackColor = Color.FromArgb(26, 16, 8);
             passwordtxt.BorderStyle = BorderStyle.FixedSingle;
             passwordtxt.ForeColor = Color.Moccasin;
@@ -62,6 +62,7 @@
             // 
             // usernametxt
             // 
+            usernametxt.Anchor = AnchorStyles.None;
             usernametxt.BackColor = Color.FromArgb(26, 16, 8);
             usernametxt.BorderStyle = BorderStyle.FixedSingle;
             usernametxt.ForeColor = Color.Moccasin;
@@ -73,7 +74,7 @@
             // 
             // passwordlab
             // 
-            passwordlab.Anchor = AnchorStyles.Right;
+            passwordlab.Anchor = AnchorStyles.None;
             passwordlab.AutoSize = true;
             passwordlab.BackColor = Color.FromArgb(26, 16, 8);
             passwordlab.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -88,7 +89,7 @@
             // 
             // usernamelbl
             // 
-            usernamelbl.Anchor = AnchorStyles.Right;
+            usernamelbl.Anchor = AnchorStyles.None;
             usernamelbl.AutoSize = true;
             usernamelbl.BackColor = Color.FromArgb(26, 16, 8);
             usernamelbl.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
