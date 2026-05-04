@@ -29,29 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableForm));
-            button1 = new Button();
+            btnTable = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // button1
+            // btnTable
             // 
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Font = new Font("Elephant", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(29, 40);
-            button1.Name = "button1";
-            button1.Size = new Size(173, 165);
-            button1.TabIndex = 0;
-            button1.Text = "TABLE 1";
-            button1.UseVisualStyleBackColor = true;
+            btnTable.BackgroundImageLayout = ImageLayout.None;
+            btnTable.Font = new Font("Elephant", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTable.Image = (Image)resources.GetObject("btnTable.Image");
+            btnTable.Location = new Point(47, 64);
+            btnTable.Margin = new Padding(5);
+            btnTable.Name = "btnTable";
+            btnTable.Size = new Size(281, 264);
+            btnTable.TabIndex = 0;
+            btnTable.Text = "TABLE 1";
+            btnTable.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(2049, 1091);
+            flowLayoutPanel1.TabIndex = 1;
             // 
             // TableForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 16, 8);
-            ClientSize = new Size(1261, 682);
-            Controls.Add(button1);
-            Margin = new Padding(2);
+            ClientSize = new Size(2049, 1091);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(btnTable);
             Name = "TableForm";
             Text = "TableForm";
             Load += TableForm_Load;
@@ -60,6 +70,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnTable;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
