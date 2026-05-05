@@ -41,8 +41,23 @@ namespace OM_Kafe_Sistemi
             }
             else if (username == "OM" && password == "2005")
             {
-                TableForm tableForm = new TableForm();
-                tableForm.Show();
+                DialogResult result = MessageBox.Show
+                ("Yes = Table\nNo = Take Away",
+                "Choose Order Type",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    TableForm tableForm = new TableForm();
+                    tableForm.Show();
+                }
+                else
+                {
+                    OrderForm orderForm = new OrderForm();
+                    orderForm.Show();
+                }
+
                 this.Hide();
             }
 

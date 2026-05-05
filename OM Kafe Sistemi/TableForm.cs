@@ -27,41 +27,49 @@ namespace OM_Kafe_Sistemi
 
             for (int i = 1; i <= 18; i++)
             {
-                Button btn = new Button();
+                Button btnTable = new Button();
 
-                btn.Text = "Masa " + i;
-                btn.Width = 150;
-                btn.Height = 130;
-                btn.Margin = new Padding(25);
+                btnTable.Text = "Masa " + i;
+                btnTable.Width = 170;
+                btnTable.Height = 150;
+                btnTable.Margin = new Padding(25);
 
-                btn.BackColor = Color.FromArgb(70, 45, 25);
-                btn.ForeColor = Color.Gold;
-                btn.Font = new Font("Arial", 13, FontStyle.Bold);
+                btnTable.BackColor = Color.FromArgb(70, 45, 25);
+                btnTable.ForeColor = Color.Gold;
+                btnTable.Font = new Font("Arial", 13, FontStyle.Bold);
 
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.FlatAppearance.BorderSize = 2;
-                btn.FlatAppearance.BorderColor = Color.Gold;
+                btnTable.FlatStyle = FlatStyle.Flat;
+                btnTable.FlatAppearance.BorderSize = 2;
+                btnTable.FlatAppearance.BorderColor = Color.Gold;
 
-                btn.Tag = "empty";
-                btn.Click += Table_Click;
+                btnTable.Tag = "empty";
+                btnTable.Click += Table_Click;
 
-                flowLayoutPanel1.Controls.Add(btn);
+                flowLayoutPanel1.Controls.Add(btnTable);
+
+                btnTable.Margin = new Padding(80);
+
+                btnTable.Tag = "empty";
+                btnTable.BackColor = Color.Green;
             }
         }
-        
+
         private void Table_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button masa = (Button)sender;
 
-            if (btn.Tag.ToString() == "empty")
+            if (masa.Tag.ToString() == "empty")
             {
-                btn.BackColor = Color.Red;
-                btn.Tag = "full";
+                masa.BackColor = Color.Red;
+                masa.Tag = "full";
+
+                OrderForm orderForm = new OrderForm();
+                orderForm.Show();
             }
             else
             {
-                btn.BackColor = Color.Green;
-                btn.Tag = "empty";
+                masa.BackColor = Color.Green;
+                masa.Tag = "empty";
             }
         }
     }
