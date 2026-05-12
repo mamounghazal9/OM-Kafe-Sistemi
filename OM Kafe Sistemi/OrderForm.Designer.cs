@@ -39,6 +39,8 @@
             removebtn = new Button();
             deletebtn = new Button();
             paybtn = new Button();
+            label1 = new Label();
+            toplamlabel = new Label();
             SuspendLayout();
             // 
             // lattebtn
@@ -122,7 +124,7 @@
             // 
             removebtn.Anchor = AnchorStyles.None;
             removebtn.BackColor = Color.FromArgb(150, 78, 72);
-            removebtn.Location = new Point(1031, 351);
+            removebtn.Location = new Point(1033, 471);
             removebtn.Name = "removebtn";
             removebtn.Size = new Size(142, 76);
             removebtn.TabIndex = 7;
@@ -133,7 +135,7 @@
             // 
             deletebtn.Anchor = AnchorStyles.None;
             deletebtn.BackColor = Color.FromArgb(150, 78, 72);
-            deletebtn.Location = new Point(1283, 351);
+            deletebtn.Location = new Point(1285, 471);
             deletebtn.Name = "deletebtn";
             deletebtn.Size = new Size(135, 76);
             deletebtn.TabIndex = 8;
@@ -144,12 +146,32 @@
             // 
             paybtn.Anchor = AnchorStyles.None;
             paybtn.BackColor = Color.FromArgb(128, 135, 94);
-            paybtn.Location = new Point(1058, 477);
+            paybtn.Location = new Point(1060, 597);
             paybtn.Name = "paybtn";
             paybtn.Size = new Size(330, 61);
             paybtn.TabIndex = 9;
             paybtn.Text = "Pay";
             paybtn.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Location = new Point(1102, 371);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 32);
+            label1.TabIndex = 10;
+            label1.Text = "Toplam:";
+            // 
+            // toplamlabel
+            // 
+            toplamlabel.Anchor = AnchorStyles.None;
+            toplamlabel.AutoSize = true;
+            toplamlabel.Location = new Point(1228, 371);
+            toplamlabel.Name = "toplamlabel";
+            toplamlabel.Size = new Size(64, 32);
+            toplamlabel.TabIndex = 11;
+            toplamlabel.Text = "-----";
             // 
             // OrderForm
             // 
@@ -157,6 +179,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1538, 737);
+            Controls.Add(toplamlabel);
+            Controls.Add(label1);
             Controls.Add(paybtn);
             Controls.Add(deletebtn);
             Controls.Add(removebtn);
@@ -172,6 +196,7 @@
             Text = "OrderForm";
             Load += OrderForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -186,5 +211,7 @@
         private Button removebtn;
         private Button deletebtn;
         private Button paybtn;
+        private Label label1;
+        private Label toplamlabel;
     }
 }
