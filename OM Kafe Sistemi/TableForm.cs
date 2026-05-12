@@ -53,7 +53,6 @@ namespace OM_Kafe_Sistemi
                 btnTable.BackColor = Color.Green;
             }
         }
-
         private void Table_Click(object sender, EventArgs e)
         {
             Button masa = (Button)sender;
@@ -68,8 +67,21 @@ namespace OM_Kafe_Sistemi
             }
             else
             {
-                masa.BackColor = Color.Green;
-                masa.Tag = "empty";
+                DialogResult result = MessageBox.Show(
+                    OrderForm.orders + "\nTotal: " + OrderForm.total + " TL\n\nPayment completed?",
+                    "Payment",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    masa.BackColor = Color.Green;
+                    masa.Tag = "empty";
+
+                    OrderForm.orders = "";
+                    OrderForm.total = 0;
+                }
             }
         }
     }

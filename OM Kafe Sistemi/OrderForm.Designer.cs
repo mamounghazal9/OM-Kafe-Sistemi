@@ -35,12 +35,12 @@
             limonatabtn = new Button();
             espressobtn = new Button();
             Desspbtn = new Button();
-            ordertxt = new ListBox();
+            orderlist = new ListBox();
             removebtn = new Button();
             deletebtn = new Button();
             paybtn = new Button();
-            label1 = new Label();
             toplamlabel = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lattebtn
@@ -53,7 +53,7 @@
             lattebtn.TabIndex = 0;
             lattebtn.Text = "Latte";
             lattebtn.UseVisualStyleBackColor = false;
-            lattebtn.Click += button1_Click;
+            lattebtn.Click += Price_Click;
             // 
             // turkishbtn
             // 
@@ -65,6 +65,7 @@
             turkishbtn.TabIndex = 1;
             turkishbtn.Text = "Turkish coffee";
             turkishbtn.UseVisualStyleBackColor = false;
+            turkishbtn.Click += Price_Click;
             // 
             // frozenbtn
             // 
@@ -76,6 +77,7 @@
             frozenbtn.TabIndex = 2;
             frozenbtn.Text = "Frozen";
             frozenbtn.UseVisualStyleBackColor = false;
+            frozenbtn.Click += Price_Click;
             // 
             // limonatabtn
             // 
@@ -87,6 +89,7 @@
             limonatabtn.TabIndex = 3;
             limonatabtn.Text = "Limonata";
             limonatabtn.UseVisualStyleBackColor = false;
+            limonatabtn.Click += Price_Click;
             // 
             // espressobtn
             // 
@@ -98,6 +101,7 @@
             espressobtn.TabIndex = 4;
             espressobtn.Text = "Espresso";
             espressobtn.UseVisualStyleBackColor = false;
+            espressobtn.Click += Price_Click;
             // 
             // Desspbtn
             // 
@@ -109,16 +113,17 @@
             Desspbtn.TabIndex = 5;
             Desspbtn.Text = "Double Espresso";
             Desspbtn.UseVisualStyleBackColor = false;
+            Desspbtn.Click += Price_Click;
             // 
-            // ordertxt
+            // orderlist
             // 
-            ordertxt.Anchor = AnchorStyles.None;
-            ordertxt.BackColor = Color.White;
-            ordertxt.FormattingEnabled = true;
-            ordertxt.Location = new Point(1010, 66);
-            ordertxt.Name = "ordertxt";
-            ordertxt.Size = new Size(452, 260);
-            ordertxt.TabIndex = 6;
+            orderlist.Anchor = AnchorStyles.None;
+            orderlist.BackColor = Color.White;
+            orderlist.FormattingEnabled = true;
+            orderlist.Location = new Point(1010, 66);
+            orderlist.Name = "orderlist";
+            orderlist.Size = new Size(452, 260);
+            orderlist.TabIndex = 6;
             // 
             // removebtn
             // 
@@ -130,6 +135,7 @@
             removebtn.TabIndex = 7;
             removebtn.Text = "Remove";
             removebtn.UseVisualStyleBackColor = false;
+            removebtn.Click += removebtn_Click;
             // 
             // deletebtn
             // 
@@ -141,6 +147,7 @@
             deletebtn.TabIndex = 8;
             deletebtn.Text = "Delete";
             deletebtn.UseVisualStyleBackColor = false;
+            deletebtn.Click += deletebtn_Click;
             // 
             // paybtn
             // 
@@ -152,26 +159,26 @@
             paybtn.TabIndex = 9;
             paybtn.Text = "Pay";
             paybtn.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Location = new Point(1102, 371);
-            label1.Name = "label1";
-            label1.Size = new Size(97, 32);
-            label1.TabIndex = 10;
-            label1.Text = "Toplam:";
+            paybtn.Click += paybtn_Click;
             // 
             // toplamlabel
             // 
             toplamlabel.Anchor = AnchorStyles.None;
             toplamlabel.AutoSize = true;
-            toplamlabel.Location = new Point(1228, 371);
+            toplamlabel.Location = new Point(1215, 371);
             toplamlabel.Name = "toplamlabel";
-            toplamlabel.Size = new Size(64, 32);
+            toplamlabel.Size = new Size(58, 32);
             toplamlabel.TabIndex = 11;
-            toplamlabel.Text = "-----";
+            toplamlabel.Text = "0 TL";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1096, 371);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 32);
+            label1.TabIndex = 12;
+            label1.Text = "Toplam:";
             // 
             // OrderForm
             // 
@@ -179,12 +186,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1538, 737);
-            Controls.Add(toplamlabel);
             Controls.Add(label1);
+            Controls.Add(toplamlabel);
             Controls.Add(paybtn);
             Controls.Add(deletebtn);
             Controls.Add(removebtn);
-            Controls.Add(ordertxt);
+            Controls.Add(orderlist);
             Controls.Add(Desspbtn);
             Controls.Add(espressobtn);
             Controls.Add(limonatabtn);
@@ -207,11 +214,11 @@
         private Button limonatabtn;
         private Button espressobtn;
         private Button Desspbtn;
-        private ListBox ordertxt;
+        private ListBox orderlist;
         private Button removebtn;
         private Button deletebtn;
         private Button paybtn;
-        private Label label1;
         private Label toplamlabel;
+        private Label label1;
     }
 }
