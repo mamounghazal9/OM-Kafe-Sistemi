@@ -52,7 +52,7 @@
             passwordtxt.BackColor = Color.FromArgb(26, 16, 8);
             passwordtxt.BorderStyle = BorderStyle.FixedSingle;
             passwordtxt.ForeColor = Color.Moccasin;
-            passwordtxt.Location = new Point(522, 400);
+            passwordtxt.Location = new Point(554, 400);
             passwordtxt.Name = "passwordtxt";
             passwordtxt.PasswordChar = '*';
             passwordtxt.Size = new Size(279, 27);
@@ -64,7 +64,7 @@
             usernametxt.BackColor = Color.FromArgb(26, 16, 8);
             usernametxt.BorderStyle = BorderStyle.FixedSingle;
             usernametxt.ForeColor = Color.Moccasin;
-            usernametxt.Location = new Point(522, 302);
+            usernametxt.Location = new Point(554, 303);
             usernametxt.Name = "usernametxt";
             usernametxt.Size = new Size(279, 27);
             usernametxt.TabIndex = 12;
@@ -76,7 +76,7 @@
             passwordlab.BackColor = Color.FromArgb(26, 16, 8);
             passwordlab.Font = new Font("Britannic Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordlab.ForeColor = Color.Moccasin;
-            passwordlab.Location = new Point(588, 350);
+            passwordlab.Location = new Point(610, 348);
             passwordlab.Name = "passwordlab";
             passwordlab.Size = new Size(160, 31);
             passwordlab.TabIndex = 11;
@@ -90,7 +90,7 @@
             usernamelbl.BackColor = Color.FromArgb(26, 16, 8);
             usernamelbl.Font = new Font("Britannic Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernamelbl.ForeColor = Color.Moccasin;
-            usernamelbl.Location = new Point(588, 255);
+            usernamelbl.Location = new Point(623, 254);
             usernamelbl.Name = "usernamelbl";
             usernamelbl.Size = new Size(147, 31);
             usernamelbl.TabIndex = 10;
