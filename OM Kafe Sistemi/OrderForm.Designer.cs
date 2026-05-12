@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             lattebtn = new Button();
-            button2 = new Button();
+            turkishbtn = new Button();
             frozenbtn = new Button();
-            limonata = new Button();
+            limonatabtn = new Button();
             espressobtn = new Button();
-            button6 = new Button();
+            Desspbtn = new Button();
             ordertxt = new ListBox();
             removebtn = new Button();
             deletebtn = new Button();
@@ -43,6 +43,7 @@
             // 
             // lattebtn
             // 
+            lattebtn.Anchor = AnchorStyles.None;
             lattebtn.BackColor = Color.FromArgb(216, 200, 176);
             lattebtn.Location = new Point(604, 281);
             lattebtn.Name = "lattebtn";
@@ -52,86 +53,100 @@
             lattebtn.UseVisualStyleBackColor = false;
             lattebtn.Click += button1_Click;
             // 
-            // button2
+            // turkishbtn
             // 
-            button2.Location = new Point(943, 259);
-            button2.Name = "button2";
-            button2.Size = new Size(162, 160);
-            button2.TabIndex = 1;
-            button2.Text = "Turkish coffee";
-            button2.UseVisualStyleBackColor = false;
+            turkishbtn.Anchor = AnchorStyles.None;
+            turkishbtn.BackColor = Color.FromArgb(216, 200, 176);
+            turkishbtn.Location = new Point(808, 281);
+            turkishbtn.Name = "turkishbtn";
+            turkishbtn.Size = new Size(162, 160);
+            turkishbtn.TabIndex = 1;
+            turkishbtn.Text = "Turkish coffee";
+            turkishbtn.UseVisualStyleBackColor = false;
             // 
             // frozenbtn
             // 
-            frozenbtn.Location = new Point(707, 482);
+            frozenbtn.Anchor = AnchorStyles.None;
+            frozenbtn.BackColor = Color.FromArgb(216, 200, 176);
+            frozenbtn.Location = new Point(604, 497);
             frozenbtn.Name = "frozenbtn";
             frozenbtn.Size = new Size(162, 160);
             frozenbtn.TabIndex = 2;
             frozenbtn.Text = "Frozen";
             frozenbtn.UseVisualStyleBackColor = false;
             // 
-            // limonata
+            // limonatabtn
             // 
-            limonata.Location = new Point(943, 482);
-            limonata.Name = "limonata";
-            limonata.Size = new Size(162, 160);
-            limonata.TabIndex = 3;
-            limonata.Text = "Limonata";
-            limonata.UseVisualStyleBackColor = false;
+            limonatabtn.Anchor = AnchorStyles.None;
+            limonatabtn.BackColor = Color.FromArgb(216, 200, 176);
+            limonatabtn.Location = new Point(808, 497);
+            limonatabtn.Name = "limonatabtn";
+            limonatabtn.Size = new Size(162, 160);
+            limonatabtn.TabIndex = 3;
+            limonatabtn.Text = "Limonata";
+            limonatabtn.UseVisualStyleBackColor = false;
             // 
             // espressobtn
             // 
-            espressobtn.Location = new Point(707, 83);
+            espressobtn.Anchor = AnchorStyles.None;
+            espressobtn.BackColor = Color.FromArgb(216, 200, 176);
+            espressobtn.Location = new Point(604, 66);
             espressobtn.Name = "espressobtn";
             espressobtn.Size = new Size(162, 160);
             espressobtn.TabIndex = 4;
             espressobtn.Text = "Espresso";
             espressobtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // Desspbtn
             // 
-            button6.Location = new Point(943, 83);
-            button6.Name = "button6";
-            button6.Size = new Size(162, 160);
-            button6.TabIndex = 5;
-            button6.Text = "Double Espresso";
-            button6.UseVisualStyleBackColor = false;
+            Desspbtn.Anchor = AnchorStyles.None;
+            Desspbtn.BackColor = Color.FromArgb(216, 200, 176);
+            Desspbtn.Location = new Point(808, 66);
+            Desspbtn.Name = "Desspbtn";
+            Desspbtn.Size = new Size(162, 160);
+            Desspbtn.TabIndex = 5;
+            Desspbtn.Text = "Double Espresso";
+            Desspbtn.UseVisualStyleBackColor = false;
             // 
             // ordertxt
             // 
-            ordertxt.BackColor = Color.FromArgb(216, 200, 176);
+            ordertxt.Anchor = AnchorStyles.None;
+            ordertxt.BackColor = Color.White;
             ordertxt.FormattingEnabled = true;
-            ordertxt.Location = new Point(1031, 101);
+            ordertxt.Location = new Point(1010, 66);
             ordertxt.Name = "ordertxt";
-            ordertxt.Size = new Size(382, 224);
+            ordertxt.Size = new Size(452, 260);
             ordertxt.TabIndex = 6;
             // 
             // removebtn
             // 
+            removebtn.Anchor = AnchorStyles.None;
             removebtn.BackColor = Color.FromArgb(150, 78, 72);
-            removebtn.Location = new Point(1087, 377);
+            removebtn.Location = new Point(1031, 351);
             removebtn.Name = "removebtn";
-            removebtn.Size = new Size(80, 50);
+            removebtn.Size = new Size(142, 76);
             removebtn.TabIndex = 7;
             removebtn.Text = "Remove";
             removebtn.UseVisualStyleBackColor = false;
             // 
             // deletebtn
             // 
+            deletebtn.Anchor = AnchorStyles.None;
             deletebtn.BackColor = Color.FromArgb(150, 78, 72);
-            deletebtn.Location = new Point(1292, 377);
+            deletebtn.Location = new Point(1283, 351);
             deletebtn.Name = "deletebtn";
-            deletebtn.Size = new Size(80, 50);
+            deletebtn.Size = new Size(135, 76);
             deletebtn.TabIndex = 8;
             deletebtn.Text = "Delete";
             deletebtn.UseVisualStyleBackColor = false;
             // 
             // paybtn
             // 
+            paybtn.Anchor = AnchorStyles.None;
             paybtn.BackColor = Color.FromArgb(128, 135, 94);
-            paybtn.Location = new Point(1098, 461);
+            paybtn.Location = new Point(1058, 477);
             paybtn.Name = "paybtn";
-            paybtn.Size = new Size(265, 47);
+            paybtn.Size = new Size(330, 61);
             paybtn.TabIndex = 9;
             paybtn.Text = "Pay";
             paybtn.UseVisualStyleBackColor = false;
@@ -146,13 +161,13 @@
             Controls.Add(deletebtn);
             Controls.Add(removebtn);
             Controls.Add(ordertxt);
-            Controls.Add(button6);
+            Controls.Add(Desspbtn);
             Controls.Add(espressobtn);
-            Controls.Add(limonata);
+            Controls.Add(limonatabtn);
             Controls.Add(frozenbtn);
-            Controls.Add(button2);
+            Controls.Add(turkishbtn);
             Controls.Add(lattebtn);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "OrderForm";
             Text = "OrderForm";
             Load += OrderForm_Load;
@@ -162,11 +177,11 @@
         #endregion
 
         private Button lattebtn;
-        private Button button2;
+        private Button turkishbtn;
         private Button frozenbtn;
-        private Button limonata;
+        private Button limonatabtn;
         private Button espressobtn;
-        private Button button6;
+        private Button Desspbtn;
         private ListBox ordertxt;
         private Button removebtn;
         private Button deletebtn;
