@@ -38,12 +38,16 @@
             // loginbtn
             // 
             loginbtn.Anchor = AnchorStyles.None;
-            loginbtn.Location = new Point(604, 444);
+            loginbtn.BackColor = Color.FromArgb(26, 16, 8);
+            loginbtn.FlatAppearance.BorderColor = Color.Moccasin;
+            loginbtn.Font = new Font("Castellar", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            loginbtn.ForeColor = Color.Moccasin;
+            loginbtn.Location = new Point(554, 452);
             loginbtn.Name = "loginbtn";
             loginbtn.Size = new Size(94, 29);
             loginbtn.TabIndex = 14;
             loginbtn.Text = "LOGİN";
-            loginbtn.UseVisualStyleBackColor = true;
+            loginbtn.UseVisualStyleBackColor = false;
             loginbtn.Click += loginbtn_Click;
             // 
             // passwordtxt
@@ -74,11 +78,11 @@
             passwordlab.Anchor = AnchorStyles.None;
             passwordlab.AutoSize = true;
             passwordlab.BackColor = Color.FromArgb(26, 16, 8);
-            passwordlab.Font = new Font("Britannic Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordlab.Font = new Font("Castellar", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordlab.ForeColor = Color.Moccasin;
-            passwordlab.Location = new Point(610, 348);
+            passwordlab.Location = new Point(587, 348);
             passwordlab.Name = "passwordlab";
-            passwordlab.Size = new Size(160, 31);
+            passwordlab.Size = new Size(205, 36);
             passwordlab.TabIndex = 11;
             passwordlab.Text = " PASSWORD";
             passwordlab.TextAlign = ContentAlignment.MiddleCenter;
@@ -88,11 +92,11 @@
             usernamelbl.Anchor = AnchorStyles.None;
             usernamelbl.AutoSize = true;
             usernamelbl.BackColor = Color.FromArgb(26, 16, 8);
-            usernamelbl.Font = new Font("Britannic Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernamelbl.Font = new Font("Castellar", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernamelbl.ForeColor = Color.Moccasin;
-            usernamelbl.Location = new Point(623, 254);
+            usernamelbl.Location = new Point(587, 249);
             usernamelbl.Name = "usernamelbl";
-            usernamelbl.Size = new Size(147, 31);
+            usernamelbl.Size = new Size(195, 36);
             usernamelbl.TabIndex = 10;
             usernamelbl.Text = "USERNAME";
             // 
