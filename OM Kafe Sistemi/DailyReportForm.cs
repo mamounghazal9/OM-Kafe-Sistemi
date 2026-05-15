@@ -14,5 +14,15 @@ namespace OM_Kafe_Sistemi
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toplabtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

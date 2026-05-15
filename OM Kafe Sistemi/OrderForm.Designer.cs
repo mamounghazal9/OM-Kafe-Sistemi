@@ -184,6 +184,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Location = new Point(674, 232);
             label1.Margin = new Padding(2, 0, 2, 0);
@@ -213,7 +214,6 @@
             Margin = new Padding(1);
             Name = "OrderForm";
             Text = "OrderForm";
-            TopMost = true;
             Load += OrderForm_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -63,6 +63,16 @@ namespace OM_Kafe_Sistemi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_15_May_2026_14_57_36 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 15 May 2026 14_57_36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2026_04_29_at_15_48_25 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2026-04-29 at 15.48.25", resourceCulture);
