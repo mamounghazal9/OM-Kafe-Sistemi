@@ -29,97 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
-            lattebtn = new Button();
-            turkishbtn = new Button();
-            frozenbtn = new Button();
-            limonatabtn = new Button();
-            espressobtn = new Button();
-            Desspbtn = new Button();
             orderlist = new ListBox();
             removebtn = new Button();
             deletebtn = new Button();
             paybtn = new Button();
             toplamlabel = new Label();
             label1 = new Label();
+            espressocheck = new CheckBox();
+            doublecheck = new CheckBox();
+            turkishcheck = new CheckBox();
+            frozencheck = new CheckBox();
+            lattecheck = new CheckBox();
+            limonatacheck = new CheckBox();
             SuspendLayout();
-            // 
-            // lattebtn
-            // 
-            lattebtn.Anchor = AnchorStyles.None;
-            lattebtn.BackColor = Color.FromArgb(216, 200, 176);
-            lattebtn.Location = new Point(372, 176);
-            lattebtn.Margin = new Padding(2);
-            lattebtn.Name = "lattebtn";
-            lattebtn.Size = new Size(100, 100);
-            lattebtn.TabIndex = 0;
-            lattebtn.Text = "Latte";
-            lattebtn.UseVisualStyleBackColor = false;
-            lattebtn.Click += Price_Click;
-            // 
-            // turkishbtn
-            // 
-            turkishbtn.Anchor = AnchorStyles.None;
-            turkishbtn.BackColor = Color.FromArgb(216, 200, 176);
-            turkishbtn.Location = new Point(497, 176);
-            turkishbtn.Margin = new Padding(2);
-            turkishbtn.Name = "turkishbtn";
-            turkishbtn.Size = new Size(100, 100);
-            turkishbtn.TabIndex = 1;
-            turkishbtn.Text = "Turkish coffee";
-            turkishbtn.UseVisualStyleBackColor = false;
-            turkishbtn.Click += Price_Click;
-            // 
-            // frozenbtn
-            // 
-            frozenbtn.Anchor = AnchorStyles.None;
-            frozenbtn.BackColor = Color.FromArgb(216, 200, 176);
-            frozenbtn.Location = new Point(372, 311);
-            frozenbtn.Margin = new Padding(2);
-            frozenbtn.Name = "frozenbtn";
-            frozenbtn.Size = new Size(100, 100);
-            frozenbtn.TabIndex = 2;
-            frozenbtn.Text = "Frozen";
-            frozenbtn.UseVisualStyleBackColor = false;
-            frozenbtn.Click += Price_Click;
-            // 
-            // limonatabtn
-            // 
-            limonatabtn.Anchor = AnchorStyles.None;
-            limonatabtn.BackColor = Color.FromArgb(216, 200, 176);
-            limonatabtn.Location = new Point(497, 311);
-            limonatabtn.Margin = new Padding(2);
-            limonatabtn.Name = "limonatabtn";
-            limonatabtn.Size = new Size(100, 100);
-            limonatabtn.TabIndex = 3;
-            limonatabtn.Text = "Limonata";
-            limonatabtn.UseVisualStyleBackColor = false;
-            limonatabtn.Click += Price_Click;
-            // 
-            // espressobtn
-            // 
-            espressobtn.Anchor = AnchorStyles.None;
-            espressobtn.BackColor = Color.FromArgb(216, 200, 176);
-            espressobtn.Location = new Point(372, 41);
-            espressobtn.Margin = new Padding(2);
-            espressobtn.Name = "espressobtn";
-            espressobtn.Size = new Size(100, 100);
-            espressobtn.TabIndex = 4;
-            espressobtn.Text = "Espresso";
-            espressobtn.UseVisualStyleBackColor = false;
-            espressobtn.Click += Price_Click;
-            // 
-            // Desspbtn
-            // 
-            Desspbtn.Anchor = AnchorStyles.None;
-            Desspbtn.BackColor = Color.FromArgb(216, 200, 176);
-            Desspbtn.Location = new Point(497, 41);
-            Desspbtn.Margin = new Padding(2);
-            Desspbtn.Name = "Desspbtn";
-            Desspbtn.Size = new Size(100, 100);
-            Desspbtn.TabIndex = 5;
-            Desspbtn.Text = "Double Espresso";
-            Desspbtn.UseVisualStyleBackColor = false;
-            Desspbtn.Click += Price_Click;
             // 
             // orderlist
             // 
@@ -193,24 +115,84 @@
             label1.TabIndex = 12;
             label1.Text = "Toplam:";
             // 
+            // espressocheck
+            // 
+            espressocheck.AutoSize = true;
+            espressocheck.Location = new Point(269, 41);
+            espressocheck.Name = "espressocheck";
+            espressocheck.Size = new Size(88, 24);
+            espressocheck.TabIndex = 13;
+            espressocheck.Text = "Espresso";
+            espressocheck.UseVisualStyleBackColor = true;
+            // 
+            // doublecheck
+            // 
+            doublecheck.AutoSize = true;
+            doublecheck.Location = new Point(426, 41);
+            doublecheck.Name = "doublecheck";
+            doublecheck.Size = new Size(139, 24);
+            doublecheck.TabIndex = 14;
+            doublecheck.Text = "double espresso";
+            doublecheck.UseVisualStyleBackColor = true;
+            // 
+            // turkishcheck
+            // 
+            turkishcheck.AutoSize = true;
+            turkishcheck.Location = new Point(269, 121);
+            turkishcheck.Name = "turkishcheck";
+            turkishcheck.Size = new Size(106, 24);
+            turkishcheck.TabIndex = 15;
+            turkishcheck.Text = "turkish kafe";
+            turkishcheck.UseVisualStyleBackColor = true;
+            // 
+            // frozencheck
+            // 
+            frozencheck.AutoSize = true;
+            frozencheck.Location = new Point(467, 121);
+            frozencheck.Name = "frozencheck";
+            frozencheck.Size = new Size(73, 24);
+            frozencheck.TabIndex = 16;
+            frozencheck.Text = "frozen";
+            frozencheck.UseVisualStyleBackColor = true;
+            // 
+            // lattecheck
+            // 
+            lattecheck.AutoSize = true;
+            lattecheck.Location = new Point(296, 228);
+            lattecheck.Name = "lattecheck";
+            lattecheck.Size = new Size(61, 24);
+            lattecheck.TabIndex = 17;
+            lattecheck.Text = "latte";
+            lattecheck.UseVisualStyleBackColor = true;
+            // 
+            // limonatacheck
+            // 
+            limonatacheck.AutoSize = true;
+            limonatacheck.Location = new Point(450, 228);
+            limonatacheck.Name = "limonatacheck";
+            limonatacheck.Size = new Size(90, 24);
+            limonatacheck.TabIndex = 18;
+            limonatacheck.Text = "limonata";
+            limonatacheck.UseVisualStyleBackColor = true;
+            // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(946, 461);
+            Controls.Add(limonatacheck);
+            Controls.Add(lattecheck);
+            Controls.Add(frozencheck);
+            Controls.Add(turkishcheck);
+            Controls.Add(doublecheck);
+            Controls.Add(espressocheck);
             Controls.Add(label1);
             Controls.Add(toplamlabel);
             Controls.Add(paybtn);
             Controls.Add(deletebtn);
             Controls.Add(removebtn);
             Controls.Add(orderlist);
-            Controls.Add(Desspbtn);
-            Controls.Add(espressobtn);
-            Controls.Add(limonatabtn);
-            Controls.Add(frozenbtn);
-            Controls.Add(turkishbtn);
-            Controls.Add(lattebtn);
             Margin = new Padding(1);
             Name = "OrderForm";
             Text = "OrderForm";
@@ -233,5 +215,12 @@
         private Button paybtn;
         private Label toplamlabel;
         private Label label1;
+        private CheckBox espressocheck;
+        private CheckBox doublecheck;
+        private CheckBox turkishcheck;
+        private CheckBox frozencheck;
+        private CheckBox lattecheck;
+        private CheckBox limonatacheck;
+        private ComboBox comboBox1;
     }
 }
