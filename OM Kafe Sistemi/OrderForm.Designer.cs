@@ -41,6 +41,7 @@
             frozencheck = new CheckBox();
             lattecheck = new CheckBox();
             limonatacheck = new CheckBox();
+            viewbtn = new Button();
             SuspendLayout();
             // 
             // orderlist
@@ -48,20 +49,18 @@
             orderlist.Anchor = AnchorStyles.None;
             orderlist.BackColor = Color.White;
             orderlist.FormattingEnabled = true;
-            orderlist.Location = new Point(622, 41);
-            orderlist.Margin = new Padding(2);
+            orderlist.Location = new Point(1011, 66);
             orderlist.Name = "orderlist";
-            orderlist.Size = new Size(280, 164);
+            orderlist.Size = new Size(452, 260);
             orderlist.TabIndex = 6;
             // 
             // removebtn
             // 
             removebtn.Anchor = AnchorStyles.None;
             removebtn.BackColor = Color.FromArgb(150, 78, 72);
-            removebtn.Location = new Point(636, 294);
-            removebtn.Margin = new Padding(2);
+            removebtn.Location = new Point(1034, 470);
             removebtn.Name = "removebtn";
-            removebtn.Size = new Size(87, 48);
+            removebtn.Size = new Size(141, 77);
             removebtn.TabIndex = 7;
             removebtn.Text = "Remove";
             removebtn.UseVisualStyleBackColor = false;
@@ -71,10 +70,9 @@
             // 
             deletebtn.Anchor = AnchorStyles.None;
             deletebtn.BackColor = Color.FromArgb(150, 78, 72);
-            deletebtn.Location = new Point(791, 294);
-            deletebtn.Margin = new Padding(2);
+            deletebtn.Location = new Point(1285, 470);
             deletebtn.Name = "deletebtn";
-            deletebtn.Size = new Size(83, 48);
+            deletebtn.Size = new Size(135, 77);
             deletebtn.TabIndex = 8;
             deletebtn.Text = "Delete";
             deletebtn.UseVisualStyleBackColor = false;
@@ -84,10 +82,9 @@
             // 
             paybtn.Anchor = AnchorStyles.None;
             paybtn.BackColor = Color.FromArgb(128, 135, 94);
-            paybtn.Location = new Point(652, 373);
-            paybtn.Margin = new Padding(2);
+            paybtn.Location = new Point(1060, 597);
             paybtn.Name = "paybtn";
-            paybtn.Size = new Size(203, 38);
+            paybtn.Size = new Size(330, 61);
             paybtn.TabIndex = 9;
             paybtn.Text = "Pay";
             paybtn.UseVisualStyleBackColor = false;
@@ -97,10 +94,9 @@
             // 
             toplamlabel.Anchor = AnchorStyles.None;
             toplamlabel.AutoSize = true;
-            toplamlabel.Location = new Point(748, 232);
-            toplamlabel.Margin = new Padding(2, 0, 2, 0);
+            toplamlabel.Location = new Point(1216, 371);
             toplamlabel.Name = "toplamlabel";
-            toplamlabel.Size = new Size(36, 20);
+            toplamlabel.Size = new Size(58, 32);
             toplamlabel.TabIndex = 11;
             toplamlabel.Text = "0 TL";
             // 
@@ -108,79 +104,102 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(674, 232);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(1095, 371);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(97, 32);
             label1.TabIndex = 12;
             label1.Text = "Toplam:";
             // 
             // espressocheck
             // 
             espressocheck.AutoSize = true;
-            espressocheck.Location = new Point(269, 41);
+            espressocheck.Location = new Point(503, 82);
+            espressocheck.Margin = new Padding(5);
             espressocheck.Name = "espressocheck";
-            espressocheck.Size = new Size(88, 24);
+            espressocheck.Size = new Size(137, 36);
             espressocheck.TabIndex = 13;
             espressocheck.Text = "Espresso";
             espressocheck.UseVisualStyleBackColor = true;
+            espressocheck.CheckedChanged += Product_CheckedChanged;
             // 
             // doublecheck
             // 
             doublecheck.AutoSize = true;
-            doublecheck.Location = new Point(426, 41);
+            doublecheck.Location = new Point(731, 82);
+            doublecheck.Margin = new Padding(5);
             doublecheck.Name = "doublecheck";
-            doublecheck.Size = new Size(139, 24);
+            doublecheck.Size = new Size(220, 36);
             doublecheck.TabIndex = 14;
             doublecheck.Text = "double espresso";
             doublecheck.UseVisualStyleBackColor = true;
+            doublecheck.CheckedChanged += Product_CheckedChanged;
             // 
             // turkishcheck
             // 
             turkishcheck.AutoSize = true;
-            turkishcheck.Location = new Point(269, 121);
+            turkishcheck.Location = new Point(503, 184);
+            turkishcheck.Margin = new Padding(5);
             turkishcheck.Name = "turkishcheck";
-            turkishcheck.Size = new Size(106, 24);
+            turkishcheck.Size = new Size(170, 36);
             turkishcheck.TabIndex = 15;
             turkishcheck.Text = "turkish kafe";
             turkishcheck.UseVisualStyleBackColor = true;
+            turkishcheck.CheckedChanged += Product_CheckedChanged;
             // 
             // frozencheck
             // 
             frozencheck.AutoSize = true;
-            frozencheck.Location = new Point(467, 121);
+            frozencheck.Location = new Point(731, 184);
+            frozencheck.Margin = new Padding(5);
             frozencheck.Name = "frozencheck";
-            frozencheck.Size = new Size(73, 24);
+            frozencheck.Size = new Size(114, 36);
             frozencheck.TabIndex = 16;
             frozencheck.Text = "frozen";
             frozencheck.UseVisualStyleBackColor = true;
+            frozencheck.CheckedChanged += Product_CheckedChanged;
             // 
             // lattecheck
             // 
             lattecheck.AutoSize = true;
-            lattecheck.Location = new Point(296, 228);
+            lattecheck.Location = new Point(503, 308);
+            lattecheck.Margin = new Padding(5);
             lattecheck.Name = "lattecheck";
-            lattecheck.Size = new Size(61, 24);
+            lattecheck.Size = new Size(93, 36);
             lattecheck.TabIndex = 17;
             lattecheck.Text = "latte";
             lattecheck.UseVisualStyleBackColor = true;
+            lattecheck.CheckedChanged += Product_CheckedChanged;
             // 
             // limonatacheck
             // 
             limonatacheck.AutoSize = true;
-            limonatacheck.Location = new Point(450, 228);
+            limonatacheck.Location = new Point(731, 308);
+            limonatacheck.Margin = new Padding(5);
             limonatacheck.Name = "limonatacheck";
-            limonatacheck.Size = new Size(90, 24);
+            limonatacheck.Size = new Size(139, 36);
             limonatacheck.TabIndex = 18;
             limonatacheck.Text = "limonata";
             limonatacheck.UseVisualStyleBackColor = true;
+            limonatacheck.CheckedChanged += Product_CheckedChanged;
+            // 
+            // viewbtn
+            // 
+            viewbtn.BackColor = Color.Gold;
+            viewbtn.Location = new Point(621, 470);
+            viewbtn.Name = "viewbtn";
+            viewbtn.Size = new Size(249, 77);
+            viewbtn.TabIndex = 19;
+            viewbtn.Text = "View list";
+            viewbtn.UseVisualStyleBackColor = false;
+            viewbtn.Click += viewbtn_Click;
             // 
             // OrderForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(946, 461);
+            ClientSize = new Size(1537, 738);
+            Controls.Add(viewbtn);
             Controls.Add(limonatacheck);
             Controls.Add(lattecheck);
             Controls.Add(frozencheck);
@@ -193,7 +212,7 @@
             Controls.Add(deletebtn);
             Controls.Add(removebtn);
             Controls.Add(orderlist);
-            Margin = new Padding(1);
+            Margin = new Padding(2);
             Name = "OrderForm";
             Text = "OrderForm";
             Load += OrderForm_Load;
@@ -222,5 +241,6 @@
         private CheckBox lattecheck;
         private CheckBox limonatacheck;
         private ComboBox comboBox1;
+        private Button viewbtn;
     }
 }

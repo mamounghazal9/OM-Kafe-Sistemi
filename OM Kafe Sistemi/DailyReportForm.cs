@@ -10,19 +10,20 @@ namespace OM_Kafe_Sistemi
 {
     public partial class DailyReportForm : Form
     {
+        public static List<string> dailyOrders = new List<string>();
         public DailyReportForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void DailyReportForm_Load(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
 
-        }
-
-        private void toplabtn_Click(object sender, EventArgs e)
-        {
-
+            foreach (string item in dailyOrders)
+            {
+                listBox1.Items.Add(item);
+            }
         }
     }
 }

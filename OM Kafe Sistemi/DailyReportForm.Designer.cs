@@ -39,18 +39,20 @@
             // 
             listBox1.BackColor = Color.FromArgb(216, 200, 176);
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(30, 107);
+            listBox1.Location = new Point(49, 171);
+            listBox1.Margin = new Padding(5);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1232, 424);
+            listBox1.Size = new Size(2000, 676);
             listBox1.TabIndex = 0;
             // 
             // label2
             // 
             label2.Font = new Font("Castellar", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Moccasin;
-            label2.Location = new Point(304, 29);
+            label2.Location = new Point(494, 46);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(694, 47);
+            label2.Size = new Size(1128, 75);
             label2.TabIndex = 4;
             label2.Text = "                   DAİLY SALES          ";
             // 
@@ -58,9 +60,10 @@
             // 
             toplaradiobtn.AutoSize = true;
             toplaradiobtn.BackColor = Color.FromArgb(192, 192, 0);
-            toplaradiobtn.Location = new Point(183, 550);
+            toplaradiobtn.Location = new Point(297, 880);
+            toplaradiobtn.Margin = new Padding(5);
             toplaradiobtn.Name = "toplaradiobtn";
-            toplaradiobtn.Size = new Size(65, 24);
+            toplaradiobtn.Size = new Size(99, 36);
             toplaradiobtn.TabIndex = 5;
             toplaradiobtn.TabStop = true;
             toplaradiobtn.Text = "topla";
@@ -70,9 +73,10 @@
             // 
             silradiobtn.AutoSize = true;
             silradiobtn.BackColor = Color.FromArgb(0, 192, 0);
-            silradiobtn.Location = new Point(469, 550);
+            silradiobtn.Location = new Point(762, 880);
+            silradiobtn.Margin = new Padding(5);
             silradiobtn.Name = "silradiobtn";
-            silradiobtn.Size = new Size(44, 24);
+            silradiobtn.Size = new Size(67, 36);
             silradiobtn.TabIndex = 6;
             silradiobtn.TabStop = true;
             silradiobtn.Text = "sil";
@@ -80,27 +84,28 @@
             // 
             // onaylabtn
             // 
-            onaylabtn.Location = new Point(317, 622);
+            onaylabtn.Location = new Point(515, 995);
+            onaylabtn.Margin = new Padding(5);
             onaylabtn.Name = "onaylabtn";
-            onaylabtn.Size = new Size(94, 29);
+            onaylabtn.Size = new Size(153, 46);
             onaylabtn.TabIndex = 7;
             onaylabtn.Text = "onayla";
             onaylabtn.UseVisualStyleBackColor = true;
             // 
             // DailyReportForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 16, 8);
-            ClientSize = new Size(1274, 705);
+            ClientSize = new Size(2070, 1128);
             Controls.Add(onaylabtn);
             Controls.Add(silradiobtn);
             Controls.Add(toplaradiobtn);
             Controls.Add(label2);
             Controls.Add(listBox1);
-            Margin = new Padding(2);
             Name = "DailyReportForm";
             Text = "DailyReportForm";
+            Load += DailyReportForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

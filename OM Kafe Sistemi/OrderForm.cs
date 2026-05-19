@@ -19,24 +19,34 @@ namespace OM_Kafe_Sistemi
         }
         private void OrderForm_Load(object sender, EventArgs e)
         {
-            espressobtn.Tag = 60;
-            lattebtn.Tag = 110;
-            Desspbtn.Tag = 85;
-            turkishbtn.Tag = 65;
-            frozenbtn.Tag = 150;
-            limonatabtn.Tag = 130;
+            espressocheck.Tag = 60;
+            lattecheck.Tag = 110;
+            doublecheck.Tag = 85;
+            turkishcheck.Tag = 65;
+            frozencheck.Tag = 150;
+            limonatacheck.Tag = 130;
         }
 
-        private void Price_Click(object sender, EventArgs e)
+        private void Product_CheckedChanged(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            CheckBox chk = (CheckBox)sender;
 
-            int price = Convert.ToInt32(btn.Tag);
+            int price = Convert.ToInt32(chk.Tag);
 
-            orderlist.Items.Add(btn.Text + " - " + price + " TL");
+            if (chk.Checked == true)
+            {
+                orderlist.Items.Add(chk.Text + " - " + price + " TL");
 
-            orders += btn.Text + " - " + price + " TL\n";
-            total += price;
+                total += price;
+            }
+            else
+            {
+                string item = chk.Text + " - " + price + " TL";
+
+                orderlist.Items.Remove(item);
+
+                total -= price;
+            }
 
             toplamlabel.Text = total + " TL";
         }
@@ -72,17 +82,62 @@ namespace OM_Kafe_Sistemi
             orderlist.Items.Clear();
 
             total = 0;
+            orders = "";
 
             toplamlabel.Text = "0 TL";
+
+            espressocheck.Checked = false;
+            lattecheck.Checked = false;
+            doublecheck.Checked = false;
+            turkishcheck.Checked = false;
+            frozencheck.Checked = false;
+            limonatacheck.Checked = false;
         }
 
         private void paybtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show
-                ("Yes = Cash\nNo = Kard",
-                "Cash?",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            if (orderlist.Items.Count == 0)
+            {
+                MessageBox.Show("No order to pay");
+                return;
+            }
+            
+            string receipt = "";
+
+            foreach (var item in orderlist.Items)
+            {
+                receipt += item.ToString() + "\n";
+            }
+
+            MessageBox.Show(
+            receipt + "\nTotal = " + total + " TL",
+            "Receipt",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information
+            );
+
+            DailyReportForm.dailyOrders.Add(receipt);
+            DailyReportForm.dailyOrders.Add("Total = " + total + " TL");
+            DailyReportForm.dailyOrders.Add("----------------");
+
+            orderlist.Items.Clear();
+            orders = "";
+            total = 0;
+            toplamlabel.Text = "0 TL";
+
+            espressocheck.Checked = false;
+            lattecheck.Checked = false;
+            doublecheck.Checked = false;
+            turkishcheck.Checked = false;
+            frozencheck.Checked = false;
+            limonatacheck.Checked = false;
+            
+        }
+
+        private void viewbtn_Click(object sender, EventArgs e)
+        {
+            DailyReportForm dailyForm = new DailyReportForm();
+            dailyForm.Show();
         }
     }
 }
