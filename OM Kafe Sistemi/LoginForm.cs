@@ -67,5 +67,10 @@ namespace OM_Kafe_Sistemi
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void usernamelbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

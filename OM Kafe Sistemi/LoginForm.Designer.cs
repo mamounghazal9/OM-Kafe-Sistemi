@@ -40,11 +40,12 @@
             loginbtn.Anchor = AnchorStyles.None;
             loginbtn.BackColor = Color.FromArgb(26, 16, 8);
             loginbtn.FlatAppearance.BorderColor = Color.Moccasin;
+            loginbtn.FlatStyle = FlatStyle.Flat;
             loginbtn.Font = new Font("Castellar", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             loginbtn.ForeColor = Color.Moccasin;
-            loginbtn.Location = new Point(554, 452);
+            loginbtn.Location = new Point(534, 452);
             loginbtn.Name = "loginbtn";
-            loginbtn.Size = new Size(94, 29);
+            loginbtn.Size = new Size(243, 29);
             loginbtn.TabIndex = 14;
             loginbtn.Text = "LOGİN";
             loginbtn.UseVisualStyleBackColor = false;
@@ -56,7 +57,7 @@
             passwordtxt.BackColor = Color.FromArgb(26, 16, 8);
             passwordtxt.BorderStyle = BorderStyle.FixedSingle;
             passwordtxt.ForeColor = Color.Moccasin;
-            passwordtxt.Location = new Point(554, 400);
+            passwordtxt.Location = new Point(534, 403);
             passwordtxt.Name = "passwordtxt";
             passwordtxt.PasswordChar = '*';
             passwordtxt.Size = new Size(279, 27);
@@ -68,7 +69,7 @@
             usernametxt.BackColor = Color.FromArgb(26, 16, 8);
             usernametxt.BorderStyle = BorderStyle.FixedSingle;
             usernametxt.ForeColor = Color.Moccasin;
-            usernametxt.Location = new Point(554, 303);
+            usernametxt.Location = new Point(534, 309);
             usernametxt.Name = "usernametxt";
             usernametxt.Size = new Size(279, 27);
             usernametxt.TabIndex = 12;
@@ -80,7 +81,7 @@
             passwordlab.BackColor = Color.FromArgb(26, 16, 8);
             passwordlab.Font = new Font("Castellar", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordlab.ForeColor = Color.Moccasin;
-            passwordlab.Location = new Point(587, 348);
+            passwordlab.Location = new Point(534, 351);
             passwordlab.Name = "passwordlab";
             passwordlab.Size = new Size(205, 36);
             passwordlab.TabIndex = 11;
@@ -89,16 +90,17 @@
             // 
             // usernamelbl
             // 
-            usernamelbl.Anchor = AnchorStyles.None;
+            usernamelbl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             usernamelbl.AutoSize = true;
             usernamelbl.BackColor = Color.FromArgb(26, 16, 8);
             usernamelbl.Font = new Font("Castellar", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernamelbl.ForeColor = Color.Moccasin;
-            usernamelbl.Location = new Point(587, 249);
+            usernamelbl.Location = new Point(534, 260);
             usernamelbl.Name = "usernamelbl";
             usernamelbl.Size = new Size(195, 36);
             usernamelbl.TabIndex = 10;
             usernamelbl.Text = "USERNAME";
+            usernamelbl.Click += usernamelbl_Click;
             // 
             // LoginForm
             // 
@@ -113,6 +115,7 @@
             Controls.Add(passwordlab);
             Controls.Add(usernamelbl);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.Manual;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
