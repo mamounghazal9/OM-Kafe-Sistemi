@@ -12,6 +12,7 @@ namespace OM_Kafe_Sistemi
     {
         public static int total = 0;
         public static string orders = "";
+        bool isClearing = false;
 
         public OrderForm()
         {
@@ -29,22 +30,21 @@ namespace OM_Kafe_Sistemi
 
         private void Product_CheckedChanged(object sender, EventArgs e)
         {
+            if (isClearing) return;
+
             CheckBox chk = (CheckBox)sender;
 
             int price = Convert.ToInt32(chk.Tag);
+            string item = chk.Text + " - " + price + " TL";
 
-            if (chk.Checked == true)
+            if (chk.Checked)
             {
-                orderlist.Items.Add(chk.Text + " - " + price + " TL");
-
+                orderlist.Items.Add(item);
                 total += price;
             }
             else
             {
-                string item = chk.Text + " - " + price + " TL";
-
                 orderlist.Items.Remove(item);
-
                 total -= price;
             }
 
@@ -101,7 +101,7 @@ namespace OM_Kafe_Sistemi
                 MessageBox.Show("No order to pay");
                 return;
             }
-            
+
             string receipt = "";
 
             foreach (var item in orderlist.Items)
@@ -109,21 +109,11 @@ namespace OM_Kafe_Sistemi
                 receipt += item.ToString() + "\n";
             }
 
-            MessageBox.Show(
-            receipt + "\nTotal = " + total + " TL",
-            "Receipt",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information
-            );
-
             DailyReportForm.dailyOrders.Add(receipt);
             DailyReportForm.dailyOrders.Add("Total = " + total + " TL");
             DailyReportForm.dailyOrders.Add("----------------");
 
-            orderlist.Items.Clear();
-            orders = "";
-            total = 0;
-            toplamlabel.Text = "0 TL";
+            isClearing = true;
 
             espressocheck.Checked = false;
             lattecheck.Checked = false;
@@ -131,7 +121,14 @@ namespace OM_Kafe_Sistemi
             turkishcheck.Checked = false;
             frozencheck.Checked = false;
             limonatacheck.Checked = false;
-            
+
+            isClearing = false;
+
+            orderlist.Items.Clear();
+            orders = "";
+            total = 0;
+
+            toplamlabel.Text = "0 TL";
         }
 
         private void viewbtn_Click(object sender, EventArgs e)

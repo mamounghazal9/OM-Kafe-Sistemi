@@ -25,15 +25,34 @@ namespace OM_Kafe_Sistemi
                 listBox1.Items.Add(item);
             }
         }
-
-        private void silradiobtn_CheckedChanged(object sender, EventArgs e)
+        private void silbtn_Click(object sender, EventArgs e)
         {
-
+            listBox1.Items.Clear();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void toplabtn_Click(object sender, EventArgs e)
         {
+            int totalIncome = 0;
 
+            foreach (string item in listBox1.Items)
+            {
+                if (item.Contains("Total ="))
+                {
+                    string number = item
+                        .Replace("Total =", "")
+                        .Replace("TL", "")
+                        .Trim();
+
+                    totalIncome += Convert.ToInt32(number);
+                }
+            }
+
+            MessageBox.Show(
+                "Toplam Gelir = " + totalIncome + " TL",
+                "Daily Income",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
     }
 }
